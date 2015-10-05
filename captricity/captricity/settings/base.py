@@ -21,7 +21,7 @@ def get_env_setting(setting):
 
 
 # Your project root
-PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__) + "../../../")
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__) + "../../../../")
 
 SUPPORTED_NONLOCALES = ['media', 'admin', 'static']
 
@@ -199,8 +199,6 @@ DEBUG_TOOLBAR_CONFIG = {
 #     'debug_toolbar.panels.logger.LoggingPanel',
 # )
 
-# Specify a custom user model to use
-#AUTH_USER_MODEL = 'accounts.MyUser'
 
 FILE_UPLOAD_PERMISSIONS = 0o0664
 
@@ -277,3 +275,5 @@ LOGGING = {
         }
     }
 }
+
+LOGIN_REDIRECT_URL = "/"
