@@ -1,0 +1,1 @@
+web: cd captricity && gunicorn captricity.wsgi --log-file -

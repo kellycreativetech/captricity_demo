@@ -19,7 +19,7 @@ import os
 #import subprocess
 
 
-PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__) + "../../")
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__) + "../../../")
 
 # Add the virtualenv packages to the site directory. This uses the technique
 # described at http://code.google.com/p/modwsgi/wiki/VirtualEnvironments

@@ -2,3 +2,4 @@ Django
 psycopg2
 captricity-python-client
 django-forms-bootstrap
+gunicorn
