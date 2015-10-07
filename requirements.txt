@@ -3,3 +3,17 @@ psycopg2
 captricity-python-client
 django-forms-bootstrap
 gunicorn
+django-celery
+
+# Templates
+django_compressor
+
+# Security
+bleach
+
+# Celery: Message queue
+celery
+django-celery
+
+# Admin
+django-debug-toolbar
