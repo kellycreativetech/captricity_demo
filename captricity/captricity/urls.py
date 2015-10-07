@@ -3,18 +3,12 @@
 from django.conf.urls import include, patterns, url
 from django.contrib import admin
 admin.autodiscover()
+from django.conf.urls.static import static
+from django.conf import settings
 
-
-def bad(request):
-    """ Simulates a server error """
-    1 / 0
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'captricity.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^bad/$', bad),
     url(r'', include('base.urls')),
-)
+) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

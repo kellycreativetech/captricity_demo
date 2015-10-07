@@ -48,6 +48,7 @@ INSTALLED_APPS = (
     'djcelery',
     'debug_toolbar',
     'compressor',
+    'django_forms_bootstrap',
 
     # Application base, containing global templates.
     'base',
@@ -277,3 +278,9 @@ LOGGING = {
 }
 
 LOGIN_REDIRECT_URL = "/"
+
+
+CAPTRICITY_APPLICATION_SECRET = get_env_setting('CAPTRICITY_APPLICATION_SECRET')
+CAPTRICITY_APPLICATION_TOKEN=get_env_setting('CAPTRICITY_APPLICATION_TOKEN')
+CAPTRICITY_USER_AGENT=get_env_setting('CAPTRICITY_USER_AGENT')
+CAPTRICITY_APP_ID=get_env_setting('CAPTRICITY_APP_ID')

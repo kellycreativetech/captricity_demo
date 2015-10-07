@@ -1,7 +1,37 @@
 {% extends "_layouts/base.html" %}
+{% load l10n i18n bootstrap_tags %}
 
 {% block login_block %}{% endblock %}
 
 {% block content %}
 
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+    {% if form.errors %}
+        <div class="alert alert-danger">
+            <p><strong>{% trans "Oh snap!" %}</strong> {% trans "Please enter a correct username and password. Note that both fields are case-sensitive." %}</p>
+        </div>
+    {% endif %}
+    <form action="/login" method="post" class="form-horizontal" role="form">{% csrf_token %}
+        <legend><span class="col-sm-offset-1">{% trans 'Log in' %}</span></legend>
+        {{ form|as_bootstrap }}
+        <div class="form-group">
+              <button type="submit" class="btn btn-primary">{% trans 'Log in' %}</button>
+              &nbsp;<button type="reset" class="btn">{% trans 'Cancel' %}</button>
+        </div>
+    </form>
+    {# <p><a href="{% url 'django.contrib.auth.views.password_reset' %}">{% trans "Reset my password" %}</a></p> #}
+    <script type="text/javascript">
+        $(function(){
+            $(".alert-message").alert();
+            $('#mainForm').submit(function(){
+                $('#submit').button('loading');
+            })
+        });
+        document.forms[1].elements[2].focus();
+    </script>
+</div>
+        </div></div>
 {% endblock %}

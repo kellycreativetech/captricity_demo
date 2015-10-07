@@ -1,0 +1,23 @@
+{% extends "_layouts/base.html" %}
+{% load staticfiles %}
+
+
+{% block page_title %}Captricity Demo - Dashboard - Issac Kelly{% endblock %}
+{% block page_class %}dash-page{% endblock %}
+{% block content %}
+<!-- This code is taken from http://getbootstrap.com/examples/jumbotron/ -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4" id="">
+          <div id="batches_list">Loading Batches...</div>
+          <div id="templates_list">Loading Templates...</div>
+        </div>
+      </div>
+    </div>
+{% endblock %}
+
+
+{% block js %}
+{{ block.super }}
+<script type="text/javascript" src="{% static "js/components.js" %}"></script>
+{% endblock %}
